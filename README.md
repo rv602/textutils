@@ -9,4 +9,4 @@ I give full credit to the Youtube channel of CodeWithHarry, as this app was made
 [Link to the course](https://www.youtube.com/playlist?list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt) 
 
 # Deployment Link
-(will be updated soon)
+[Link to the website](https://illustrious-caramel-7d9c47.netlify.app)
