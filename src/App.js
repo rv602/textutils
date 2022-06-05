@@ -40,31 +40,17 @@ function App() {
 
   return (
     <>
-      {/* <Router>
-        <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode} />
-        <Alert alert={alert} />
-        <div className="container my-4">
-          <Routes>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/">
-              <TextForm heading="Enter the text to analyze below" mode={mode} showAlert={showAlert} />
-            </Route>
-          </Routes>
-        </div>
-      </Router> */}
       <Router>
         <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <div className="container my-4">
           <Routes>
-          <Route exact path="/about" element={<About mode={mode} />}>
-          </Route>
-          <Route exact path="/"
-            element={<TextForm heading="Enter text to analyze" mode={mode} showAlert={showAlert} />}>
-          </Route>
-        </Routes>
+            <Route exact path="/about" element={<About mode={mode} />}>
+            </Route>
+            <Route exact path="/"
+              element={<TextForm heading="Enter text to analyze" mode={mode} showAlert={showAlert} />}>
+            </Route>
+          </Routes>
         </div>
       </Router>
     </>
