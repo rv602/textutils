@@ -2,6 +2,12 @@ import React, { useState } from "react";
 
 export default function TextForm(props) {
 
+  const analysis = (comp) => {
+    let text = comp.split(/[ ]+/)
+    let text2 = text.join(" ")
+    return text2
+  }
+
   const handleUpClick = () => {
     let newText = text.toUpperCase();
     previewTextSetter(newText)
@@ -18,7 +24,7 @@ export default function TextForm(props) {
   };
 
   const handleExtraSpaces = (event) => {
-    let newText = text.split(/[ ]+/)
+    let newText = previewText.split(/[ ]+/)
     previewTextSetter(newText.join(" "))
   };
 
@@ -86,7 +92,8 @@ export default function TextForm(props) {
                   }{" "}
                   words {text.length} characters
                 </p>
-                <p>{text.length === 0 ? defaultMin = "No text given" : defaultMin = String(0.08 * text.split(" ").length) + " minutes to read"}</p>
+                {/* <p>{text.length === 0 ? defaultMin = "No text given" : defaultMin = String(0.08 * text.trim().split(" ").length) + " minutes to read"}</p> */}
+                <p>{text.length === 0 ? defaultMin = "No text given" : defaultMin = String(0.08 * analysis(text).trim().split(" ").length) + " minutes to read"}</p>
               </div>
             </div>
           </div>
