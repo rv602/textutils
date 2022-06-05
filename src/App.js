@@ -6,10 +6,7 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Link,
-  Redirect,
   Routes
 } from "react-router-dom";
 
@@ -62,7 +59,7 @@ function App() {
         <Alert alert={alert} />
         <div className="container my-4">
           <Routes>
-          <Route exact path="/about" element={<About />}>
+          <Route exact path="/about" element={<About mode={mode} />}>
           </Route>
           <Route exact path="/"
             element={<TextForm heading="Enter text to analyze" mode={mode} showAlert={showAlert} />}>
